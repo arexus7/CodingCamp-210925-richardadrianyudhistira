@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/id/a/a2/Logo_Binus_University.png">
+  <title>My Company — Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"></div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="profile.html">Our Profile</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#message-us">Message Us</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <!-- Photo banner -->
+    <section class="banner">
+      <img src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?cs=srgb&dl=pexels-pixabay-269077.jpg&fm=jpg" alt="Company banner" />
+      <div class="banner-overlay">
+        <h1 id="welcome-msg">Hi, Visitor — Welcome To Website</h1>
+      </div>
+    </section>
+
+ <!-- Our headquarter / circles (mockup) -->
+    <section id="portfolio" class="headquarters">
+      <h2>Our Headquarter</h2>
+      <div class="hq-list">
+        <div class="hq-item">
+          <div class="hq-circle jakarta"></div>
+          <p>Jakarta</p>
+        </div>
+        <div class="hq-item">
+          <div class="hq-circle bandung"></div>
+          <p>Bandung</p>
+        </div>
+        <div class="hq-item">
+          <div class="hq-circle surabaya"></div>
+          <p>Surabaya</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- content grid -->
+    <section class="content-grid">
+      <!-- left column: form -->
+      <div class="left-col">
+        <h2>Message Us</h2>
+        <form id="contact-form" novalidate>
+          <label>
+            Name
+            <input type="text" id="name" name="name" placeholder="Your name" />
+          </label>
+
+        <label>Gender
+        <input type="radio" id="gender" value="Male" name="Gender"> Male
+        <input type="radio" id="gender" value="Female" name="Gender"> Female
+        </label>
+
+          <label>
+            Date of Birth
+            <input type="date" id="date" name="date" placeholder="" />
+          </label>
+
+          <label>
+            Message
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" id="submit-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- right column: display current time + submitted values -->
+      <aside class="right-col">
+        <div class="panel">
+          <h3>Current time</h3>
+          <div id="current-time" class="muted">--</div>
+        </div>
+
+        <div class="panel">
+          <h3>Last Submission</h3>
+          <div id="submission-output" class="output">
+            <p><strong>Name:</strong> <span id="out-name">—</span></p>
+            <p><strong>Gender:</strong> <span id="out-gender">—</span></p>
+            <p><strong>Date of Birth:</strong> <span id="out-date">—</span></p>
+            <p><strong>Message:</strong> <span id="out-message">—</span></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="yr"></span> Richard Adrian Yudhistira — All rights reserved</small>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
